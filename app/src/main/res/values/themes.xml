@@ -1,0 +1,4 @@
+<resources>
+
+    <style name="Theme.WorldCinema" parent="@style/Theme.Leanback" />
+</resources>

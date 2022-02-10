@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/fon"
+    tools:context=".MainScreen">
+
+
+    <ImageView
+        android:layout_marginTop="-5dp"
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_marginLeft="20dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/text" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@id/imageView2"
+        android:layout_marginTop="-50dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#FFFFFF"
+            android:id="@+id/t_t"
+            android:text="В тренде"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_trend"
+            android:layout_below="@id/t_t"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#FFFFFF"
+            android:id="@+id/t_n"
+            android:layout_marginLeft="10dp"
+            android:text="Новое"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_new"
+            android:layout_below="@id/t_n"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:textColor="#FFFFFF"
+            android:id="@+id/t_y"
+            android:text="Для Вас"
+            android:layout_marginLeft="10dp"
+            android:textSize="20dp"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_my"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/t_y"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>
