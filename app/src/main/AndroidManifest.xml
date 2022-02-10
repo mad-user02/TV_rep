@@ -36,6 +36,9 @@
         <activity
             android:name=".MainScreen"
             android:exported="false" />
+        <activity
+            android:name=".MovieScreen"
+            android:exported="false" />
     </application>
 
 </manifest>

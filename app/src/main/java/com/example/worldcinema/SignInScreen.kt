@@ -41,8 +41,6 @@ class SignInScreen : FragmentActivity() {
 
                 override fun onFailure(call: Call<Token>, t: Throwable) {
                     Toast.makeText(this@SignInScreen, "Ошибка на сервере", Toast.LENGTH_LONG).show()
-                    val intent = Intent(this@SignInScreen, MainScreen::class.java)
-                    startActivity(intent)
                 }
 
             })

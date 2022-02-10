@@ -1,5 +1,6 @@
 package com.example.worldcinema
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.util.Log
@@ -30,6 +31,23 @@ class MainScreen : FragmentActivity() {
                 Log.d("RETROFIT", result.toString())
                 rv_trend.adapter = adapter
                 rv_trend.layoutManager = LinearLayoutManager(this@MainScreen, RecyclerView.HORIZONTAL, false)
+
+                object : CountDownTimer(3000, 1) {
+                    override fun onTick(p0: Long) {
+
+                    }
+
+                    override fun onFinish() {
+                        val intent = Intent(this@MainScreen, MovieScreen::class.java)
+                        intent.putExtra("film_id", result[0].movieId)
+                        intent.putExtra("film_name", result[0].name)
+                        intent.putExtra("film_age", result[0].age)
+                        intent.putExtra("film_poster", result[0].poster)
+                        intent.putExtra("film_description", result[0].description)
+                        startActivity(intent)
+                    }
+
+                }.start()
 
             }
 
